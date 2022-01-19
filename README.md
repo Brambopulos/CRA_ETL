@@ -4,7 +4,11 @@ Automatic ETL script for the Cyber Risk Audit
 This program is designed to extract and normalize data outputted by the CRA ([project found here](https://github.com/sdshook/Audit)). 
 
 # USAGE:
-python3 ./etl_process_\*.py -u \[USERNAME] -l \[MYSQL SERVER LOCATION] -n \[DB NAME] -d \[VERBOSE]
+MySQL (v1)
+python3 ./etl_process_v1.py -u \[USERNAME] -l \[MYSQL SERVER LOCATION] -n \[DB NAME] -d \[VERBOSE]
+
+SQLite (v2)
+python3 ./etl_process_v2.py -l \[SQLITE DB LOCATION] -v \[VERBOSE]
 
 # PREP:
 1. Install all necessary packages from the requirements.txt file via pip3.
