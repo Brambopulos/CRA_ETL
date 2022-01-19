@@ -83,7 +83,10 @@ def formatSS(csvfile):
     with open(csvfile, 'r') as f:
         fo = io.StringIO()
         data = f.readlines()
-        fo.writelines(re.sub('users*pid', '', line) for line in data)
+        for line in data:
+            newdata = re.sub(r'user' + '.*' + r'pid=', '', line)
+            newdata = re.sub(r'timer' + '.*', '-', newdata)
+            fo.writelines(newdata)
         fo.seek(0)
 
     col_names=['Computername', 'AuditDate', 'Protocol', 'LocalAddress', 'RemoteAddress', 'State', 'PID']
