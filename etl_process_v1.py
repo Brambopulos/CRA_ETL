@@ -149,7 +149,7 @@ etldb = sqlalchemy.create_engine("mysql+pymysql://{}:{}@{}".format(args.user, pw
 log("Creating database...")
 # Create ETL database
 etldb.execute("CREATE DATABASE IF NOT EXISTS {}".format(args.name))
-etldb.execute("USE %s".format(args.name))
+etldb.execute("USE {}".format(args.name))
 
 log("Creating tables...")
 # Create activecomms table
