@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS allfiles(
     creationtime VARCHAR(255),
     lastwritetime VARCHAR(255),
     productversion VARCHAR(255),
-    fileversion VARCHAR(255),
+    fileversion TEXT,
     description VARCHAR(255),
     sha1 VARCHAR(255),
     md5 VARCHAR(255));
@@ -489,7 +489,7 @@ CREATE TABLE IF NOT EXISTS tasks(
     status VARCHAR(255),
     lastruntime VARCHAR(255),
     nextruntime VARCHAR(255),
-    actions VARCHAR(255),
+    actions TEXT,
     enabled VARCHAR(255),
     author VARCHAR(255),
     description TEXT,
